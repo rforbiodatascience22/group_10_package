@@ -17,10 +17,10 @@ plot_occurrence <- function(count_occ){
     as.data.frame()
 
   colnames(counts) <- c("Counts")
-  counts[["Name_me2"]] <- rownames(counts)
+  counts[["Amino_Acid"]] <- rownames(counts)
 
   plot_of_occ <- counts %>%
-    ggplot2::ggplot(ggplot2::aes(x = count_occ, y = Counts, fill = count_occ)) +
+    ggplot2::ggplot(ggplot2::aes(x = Amino_Acid, y = Counts, fill = Amino_Acid)) +
     ggplot2::geom_col() +
     ggplot2::theme_bw()
 
