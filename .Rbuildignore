@@ -3,3 +3,4 @@
 ^centraldogma\.Rcheck$
 ^centraldogma.*\.tar\.gz$
 ^centraldogma.*\.tgz$
+^LICENSE\.md$
