@@ -3,4 +3,6 @@
 export(divide_codons)
 export(function_4)
 export(generate_dna)
+export(plot_occurrence)
 export(transcribe)
+importFrom(magrittr,"%>%")
