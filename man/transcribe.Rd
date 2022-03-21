@@ -17,5 +17,5 @@ Transcribe DNA to RNA, substitute T with U
 }
 \examples{
 transcribe(DNA = "ATTA")
-[1] "AUUA"
+#[1] "AUUA"
 }

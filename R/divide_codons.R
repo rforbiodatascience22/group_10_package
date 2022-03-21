@@ -10,7 +10,7 @@
 #'
 #'string <- "ATCGTACGATATGATACAGAGATAGACATATTTAACGG"
 #'divide_codons(string)
-#'"ATC" "GTA" "CGA" "TAT" "GAT" "ACA" "GAG" "ATA" "GAC" "ATA" "TTT" "AAC"
+#'#"ATC" "GTA" "CGA" "TAT" "GAT" "ACA" "GAG" "ATA" "GAC" "ATA" "TTT" "AAC"
 
 divide_codons <- function(RNA_string, start = 1){
   RNA_len <- nchar(RNA_string)
