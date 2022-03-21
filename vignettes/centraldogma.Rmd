@@ -1,6 +1,6 @@
 ---
 title: "centraldogma"
-output: rmarkdown::pdf_vignette
+output: rmarkdown::pdf_document
 vignette: >
   %\VignetteIndexEntry{centraldogma}
   %\VignetteEngine{knitr::rmarkdown}
@@ -9,7 +9,7 @@ vignette: >
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
+  collapse = TRUE,  
   comment = "#>"
 )
 ```
@@ -18,26 +18,30 @@ knitr::opts_chunk$set(
 library(centraldogma)
 ```
 
+### Generate DNA
 
-### Generating DNA
 
+### Transcribe DNA
 
-### Transcribing DNA
+Central dogma simulates transcription from DNA to RNA, using ```transcribe()`` functions,   
+which takes in a DNA fragment as the argument and replaces Thymine with Uracil. 
 
-Function ```transcribe()``` takes a DNA fragment as the argument outputs a transcribed RNA version,   
-with Thymine replaced with Uracil.
+* input - string representing DNA
+* output - string representing RNA
 
 ```{r}
-fragment <- "TAGTATGAGA"
+dna_fragment <- "CCATGTTATG"
 
-transcribe(DNA = fragment)
+transcribe(dna_fragment)
 ```
+
 
 
 ### Divide Codons
 
-### Translate
+### Translate RNA
 
-### Plot Amino Acid occurences 
+### Plot amino acid occurences in the protein 
 
-### Example Workflow 
+
+### Example Workflow / Simulation

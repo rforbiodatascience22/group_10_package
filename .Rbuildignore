@@ -4,3 +4,5 @@
 ^centraldogma.*\.tar\.gz$
 ^centraldogma.*\.tgz$
 ^LICENSE\.md$
+^doc$
+^Meta$
