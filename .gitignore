@@ -6,3 +6,4 @@
 centraldogma.Rcheck/
 centraldogma*.tar.gz
 centraldogma*.tgz
+inst/doc

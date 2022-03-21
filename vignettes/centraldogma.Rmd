@@ -1,0 +1,43 @@
+---
+title: "centraldogma"
+output: rmarkdown::pdf_vignette
+vignette: >
+  %\VignetteIndexEntry{centraldogma}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(centraldogma)
+```
+
+
+### Generating DNA
+
+
+### Transcribing DNA
+
+Function ```transcribe()``` takes a DNA fragment as the argument outputs a transcribed RNA version,   
+with Thymine replaced with Uracil.
+
+```{r}
+fragment <- "TAGTATGAGA"
+
+transcribe(DNA = fragment)
+```
+
+
+### Divide Codons
+
+### Translate
+
+### Plot Amino Acid occurences 
+
+
