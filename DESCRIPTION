@@ -2,7 +2,7 @@ Package: centraldogma
 Title: Central Dogma for Biology
 Version: 0.0.0.9000
 Authors@R: c(
-    person(given = "Mikkel Frier", family = "Wolfhagen", email="s184240@student.dtu.dk", role = "aut"),
+    person(given = "Mikkel Frier", family = "Wolfhagen", email="s184240@student.dtu.dk", role = c("cre", "aut")),
     person(given = "Nilas Tim", family = "Schüsler", email="s123015@student.dtu.dk", role = "aut"),
     person(given = "Adresya Suresh", family = "Azhakath", role = "aut"),
     person(given = "Kolbrun Dora", family = "Magnusdottir", role = "aut"),
