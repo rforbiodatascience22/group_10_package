@@ -2,8 +2,11 @@ Package: centraldogma
 Title: Central Dogma for Biology
 Version: 0.0.0.9000
 Authors@R: 
-    person("Mikkel", "Wolfhagen", , "s184240@student.dtu.dk", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person(given = "Mikkel", family = "Wolfhagen", middle="Frier", email="s184240@student.dtu.dk")
+    person(given = "Nilas", family = "Schüsler", middle="Tim", email="s123015@student.dtu.dk")
+    person(given = "Adresya", family = "Azhakath", middle="Suresh")
+    person(given = "Kolbrun", family = "Magnusdottir", middle="Dora")
+    person(given = "Filip", family = "Uzdowski", middle="Marek")
 Description: Implements the central dogma of biology by translating DNA to RNA and translating RNA to Protein.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
