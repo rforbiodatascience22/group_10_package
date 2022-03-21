@@ -1,8 +1,8 @@
 #' Transcribe DNA to RNA, substitute T with U
 #'
-#' @param DNA
+#' @param DNA DNA sequence
 #'
-#' @return
+#' @return RNA sequence
 #' @export
 #'
 #' @examples

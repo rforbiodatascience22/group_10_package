@@ -7,7 +7,9 @@
 divide_codons(RNA_string, start = 1)
 }
 \arguments{
-\item{start, }{reading frame}
+\item{RNA_string}{Rna string}
+
+\item{start}{start of ORF}
 }
 \value{
 Vector of all the codons included in the string
