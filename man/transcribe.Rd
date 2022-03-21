@@ -7,10 +7,10 @@
 transcribe(DNA)
 }
 \arguments{
-\item{DNA}{}
+\item{DNA}{DNA sequence}
 }
 \value{
-
+RNA sequence
 }
 \description{
 Transcribe DNA to RNA, substitute T with U

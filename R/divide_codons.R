@@ -1,7 +1,7 @@
 #' Divide into codons
 #'
-#' @param RNA_string
-#' @param start #starting reading frame
+#' @param RNA_string Rna string
+#' @param start start of ORF
 #'
 #' @return Vector of all the codons included in the string
 #' @export
