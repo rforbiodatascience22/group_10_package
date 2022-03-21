@@ -40,4 +40,4 @@ transcribe(DNA = fragment)
 
 ### Plot Amino Acid occurences 
 
-
+### Example Workflow 
