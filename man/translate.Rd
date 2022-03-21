@@ -2,7 +2,7 @@
 % Please edit documentation in R/translate.R
 \name{translate}
 \alias{translate}
-\title{Title}
+\title{Translates codons into amino acids}
 \usage{
 translate(codons)
 }
@@ -10,5 +10,5 @@ translate(codons)
 \item{codons}{fdb}
 }
 \description{
-Title
+Translates codons into amino acids
 }

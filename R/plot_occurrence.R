@@ -1,6 +1,6 @@
 #' Plot occurences of amino acids in peptides
 #'
-#' @param count_occ
+#' @param count_occ aminoacid string to plot
 #'
 #' @return plot_of_occ
 #' @export

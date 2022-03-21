@@ -7,7 +7,7 @@
 plot_occurrence(count_occ)
 }
 \arguments{
-\item{count_occ}{}
+\item{count_occ}{aminoacid string to plot}
 }
 \value{
 plot_of_occ
