@@ -1,2 +1,5 @@
-^mypkgname\.Rproj$
+^centraldogma\.Rproj$
 ^\.Rproj\.user$
+^centraldogma\.Rcheck$
+^centraldogma.*\.tar\.gz$
+^centraldogma.*\.tgz$

@@ -3,3 +3,6 @@
 .Rdata
 .httr-oauth
 .DS_Store
+centraldogma.Rcheck/
+centraldogma*.tar.gz
+centraldogma*.tgz
