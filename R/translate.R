@@ -1,9 +1,9 @@
-#' Title
+#' Translates codons into amino acids
 #' @param codons fdb
 #' @export
 
 
-function_4 <- function(codons){
-  function_4_2 <- paste0(codon_table[codons], collapse = "")
-  return(function_4_2)
+translate <- function(codons){
+  amino_acids <- paste0(codon_table[codons], collapse = "")
+  return(amino_acids)
 }
