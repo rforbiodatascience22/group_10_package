@@ -7,6 +7,7 @@
 #'
 #' @examples
 #' @importFrom magrittr %>%
+#' @importFrom rlang .data
 plot_occurrence <- function(count_occ){
   aminoacid <- count_occ %>%
     stringr::str_split(pattern = stringr::boundary("character"), simplify = TRUE) %>%
@@ -20,7 +21,7 @@ plot_occurrence <- function(count_occ){
   counts[["Amino_Acid"]] <- rownames(counts)
 
   plot_of_occ <- counts %>%
-    ggplot2::ggplot(ggplot2::aes(x = Amino_Acid, y = Counts, fill = Amino_Acid)) +
+    ggplot2::ggplot(ggplot2::aes(x = .data$Amino_Acid, y = .data$Counts, fill = .data$Amino_Acid)) +
     ggplot2::geom_col() +
     ggplot2::theme_bw()
 
