@@ -7,9 +7,11 @@
 #' @export
 #'
 #' @examples
-#' string <- "ATCGTACGATATGATACAGAGATAGACATATTTAACGG"
-#' split_codons(string)
+#' rna_string <- "ATCGTACGATATGATACAGAGATAGACATATTTAACGG"
+#' split_codons(rna_string)
 #' # "ATC" "GTA" "CGA" "TAT" "GAT" "ACA" "GAG" "ATA" "GAC" "ATA" "TTT" "AAC"
+#' split_codons(rna_string, start = 5)
+#' # "TAC" "GAT" "ATG" "ATA" "CAG" "AGA" "TAG" "ACA" "TAT" "TTA" "ACG"
 
 split_codons <- function(rna_string, start = 1){
   rna_length <- nchar(rna_string)

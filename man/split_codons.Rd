@@ -9,16 +9,18 @@ split_codons(rna_string, start = 1)
 \arguments{
 \item{rna_string}{RNA sequence string}
 
-\item{start}{position in RNA sequence where open reading frame starts}
+\item{start}{position in RNA sequence where reading frame starts}
 }
 \value{
-Vector of codons in open reading frame
+Vector of codons in reading frame
 }
 \description{
 Split RNA sequence into codons
 }
 \examples{
-string <- "ATCGTACGATATGATACAGAGATAGACATATTTAACGG"
-split_codons(string)
+rna_string <- "ATCGTACGATATGATACAGAGATAGACATATTTAACGG"
+split_codons(rna_string)
 # "ATC" "GTA" "CGA" "TAT" "GAT" "ACA" "GAG" "ATA" "GAC" "ATA" "TTT" "AAC"
+split_codons(rna_string, start = 5)
+# "TAC" "GAT" "ATG" "ATA" "CAG" "AGA" "TAG" "ACA" "TAT" "TTA" "ACG"
 }
