@@ -21,5 +21,5 @@ Divide into codons
 
 string <- "ATCGTACGATATGATACAGAGATAGACATATTTAACGG"
 divide_codons(string)
-#"ATC" "GTA" "CGA" "TAT" "GAT" "ACA" "GAG" "ATA" "GAC" "ATA" "TTT" "AAC"
+# "ATC" "GTA" "CGA" "TAT" "GAT" "ACA" "GAG" "ATA" "GAC" "ATA" "TTT" "AAC"
 }
