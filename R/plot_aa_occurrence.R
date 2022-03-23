@@ -6,7 +6,7 @@
 #' @export
 #'
 #' @examples
-#' plot_aa_occurrence(protein_string = "RQNANANAEPNANANANARNARNAANNNANANAPNAGNANA")
+#' plot_aa_occurrence(protein_string = "GGASVTVSRFW*PSQSKQRHRVEPVS*IQSYLP")
 #' @importFrom magrittr %>%
 #' @importFrom rlang .data
 plot_aa_occurrence <- function(protein_string){
@@ -15,7 +15,7 @@ plot_aa_occurrence <- function(protein_string){
     as.character() %>%
     unique()
 
-  counts <- sapply(unique_amino_acids, function(amino_acid) stringr::str_count(string = protein_string, pattern =  amino_acid)) %>%
+  counts <- sapply(unique_amino_acids, function(amino_acid) stringr::str_count(string = protein_string, pattern = stringr::fixed(amino_acid))) %>%
     as.data.frame()
 
   colnames(counts) <- c("Counts")
