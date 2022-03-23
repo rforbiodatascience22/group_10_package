@@ -37,15 +37,15 @@ transcribe(dna_fragment)
 
 
 
-### Divide Codons
+### Split Codons
 
-Divides a RNA string into codons based on the start reading frame 
+Splits a RNA string into codons based on the start reading frame 
 Start can be either 1,2 or 3 and the default is 1
 
 ```{r}
 string <- "ATCGTACGATATGATACAGAGATAGACATATTTAACGG"
 
-divide_codons(string, start = 1)
+split_codons(string, start = 1)
 ```
 
 

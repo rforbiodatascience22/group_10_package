@@ -17,5 +17,5 @@ Generate a random DNA sequence
 }
 \examples{
 generate_dna(length = 10)
-"CAGGCGCGTT"
+# "CAGGCGCGTT"
 }
