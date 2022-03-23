@@ -6,7 +6,8 @@
 #' @export
 #'
 #' @examples
-#' plot_aa_occurrence(protein_string = "GGASVTVSRFW*PSQSKQRHRVEPVS*IQSYLP")
+#' protein_string <- "GGASVTVSRFW*PSQSKQRHRVEPVS*IQSYLP"
+#' plot_aa_occurrence(protein_string)
 #' @importFrom magrittr %>%
 #' @importFrom rlang .data
 plot_aa_occurrence <- function(protein_string){
