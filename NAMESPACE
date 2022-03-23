@@ -2,7 +2,7 @@
 
 export(divide_codons)
 export(generate_dna)
-export(plot_occurrence)
+export(plot_aa_occurrence)
 export(transcribe)
 export(translate)
 importFrom(magrittr,"%>%")
