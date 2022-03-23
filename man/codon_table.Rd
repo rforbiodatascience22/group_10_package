@@ -3,9 +3,9 @@
 \docType{data}
 \name{codon_table}
 \alias{codon_table}
-\title{Codon table}
+\title{RNA Codon Table}
 \format{
-
+An object of class \code{character} of length 64.
 }
 \source{
 \url{https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi?chapter=tgencodes#SG1}
@@ -14,6 +14,6 @@
 codon_table
 }
 \description{
-A table of all the codons
+A table mapping all RNA codons to their corresponding amino acids
 }
 \keyword{datasets}
