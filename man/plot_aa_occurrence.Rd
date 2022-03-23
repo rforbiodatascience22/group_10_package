@@ -16,5 +16,6 @@ Plot of occurrences of each amino acid in a peptide
 Plot occurrences of amino acids in peptides
 }
 \examples{
-plot_aa_occurrence(protein_string = "GGASVTVSRFW*PSQSKQRHRVEPVS*IQSYLP")
+protein_string <- "GGASVTVSRFW*PSQSKQRHRVEPVS*IQSYLP"
+plot_aa_occurrence(protein_string)
 }
