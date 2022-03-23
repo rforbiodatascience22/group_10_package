@@ -10,12 +10,12 @@
 #' @importFrom magrittr %>%
 #' @importFrom rlang .data
 plot_aa_occurrence <- function(protein_string){
-  protein_vector <- protein_string %>%
+  unique_amino_acids <- protein_string %>%
     stringr::str_split(pattern = stringr::boundary("character"), simplify = TRUE) %>%
     as.character() %>%
     unique()
 
-  counts <- sapply(protein_vector, function(amino_acid) stringr::str_count(string = protein_string, pattern =  amino_acid)) %>%
+  counts <- sapply(unique_amino_acids, function(amino_acid) stringr::str_count(string = protein_string, pattern =  amino_acid)) %>%
     as.data.frame()
 
   colnames(counts) <- c("Counts")
