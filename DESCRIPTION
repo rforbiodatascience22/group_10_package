@@ -1,29 +1,43 @@
 Package: centraldogma
 Title: Central Dogma for Biology
 Version: 0.0.0.9000
-Authors@R: c(
-    person(given = "Mikkel Frier", family = "Wolfhagen", email="s184240@student.dtu.dk", role = c("cre", "aut")),
-    person(given = "Nilas Tim", family = "Schüsler", email="s123015@student.dtu.dk", role = "aut"),
-    person(given = "Adresya Suresh", family = "Azhakath", role = "aut"),
-    person(given = "Kolbrun Dora", family = "Magnusdottir", role = "aut"),
-    person(given = "Filip Marek", family = "Uzdowski", role = "aut")
-    )
-Description: Implements the central dogma of biology by translating DNA to RNA and translating RNA to Protein.
+Authors@R:
+  c(person(given = "Mikkel Frier",
+           family = "Wolfhagen",
+           email="s184240@student.dtu.dk",
+           role = c("cre",
+                    "aut")),
+    person(given = "Nilas Tim",
+           family = "Schüsler",
+           email="s123015@student.dtu.dk",
+           role = "aut"),
+    person(given = "Adresya Suresh",
+           family = "Azhakath",
+           role = "aut"),
+    person(given = "Kolbrun Dora",
+           family = "Magnusdottir",
+           role = "aut"),
+    person(given = "Filip Marek",
+           family = "Uzdowski",
+           role = "aut"))
+Description:
+  Implements the central dogma of biology by translating DNA to RNA and
+  translating RNA to Protein.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Depends: 
-    R (>= 2.10),
-    rlang
+  R (>= 2.10),
+  rlang
 LazyData: true
 Suggests: 
-    knitr,
-    rmarkdown,
-    testthat (>= 3.0.0)
+  knitr,
+  rmarkdown,
+  testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
-    ggplot2,
-    magrittr,
-    stringr
+  ggplot2,
+  magrittr,
+  stringr
 VignetteBuilder: knitr
