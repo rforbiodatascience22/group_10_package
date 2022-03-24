@@ -1,10 +1,11 @@
 ---
-title: "centraldogma"
+title: "Introduction to centraldogma"
 output: rmarkdown::pdf_document
 vignette: >
   %\VignetteIndexEntry{centraldogma}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+urlcolor: blue
 ---
 
 ```{r, include = FALSE}
@@ -14,9 +15,24 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+```{r setup, include = FALSE}
 library(centraldogma)
 ```
+
+The [centraldogma](https://github.com/rforbiodatascience22/group_10_package)
+package replicates the central dogma of molecular biology. More specifically it
+replicates the flow of genetic information from DNA to RNA to protein.
+
+The package consists of the following functions:
+
+* `generate_dna` generates a random DNA sequence.
+* `transcribe` transcribes a DNA sequence into a RNA sequence.
+* `split_codons` splits a RNA sequence into codons.
+* `translate` translates a RNA codon sequence into a protein sequence.
+* `plot_aa_occurrence` plots the occurrence of each amino acid in a protein
+sequence.
+
+Each function is demonstrated below:
 
 ### Generate DNA
 
