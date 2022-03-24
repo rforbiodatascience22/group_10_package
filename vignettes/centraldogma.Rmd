@@ -85,7 +85,7 @@ translate(rna_codon_sequence)
 The `plot_aa_occurrence` function makes a plot of the occurrence of each amino
 acid in a protein sequence:
 
-```{r, fig.width=6, fig.height=2}
+```{r, fig.height=2}
 protein_sequence <- "GGASVTVSRFW_PSQSKQRHRVEPVS_IQSYLP"
 
 plot_aa_occurrence(protein_sequence)
