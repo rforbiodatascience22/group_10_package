@@ -23,7 +23,7 @@ The [centraldogma](https://github.com/rforbiodatascience22/group_10_package)
 package replicates the central dogma of molecular biology. More specifically it
 replicates the flow of genetic information from DNA to RNA to protein.
 
-The package consists of the following functions:
+The package consists of the following five functions:
 
 * `generate_dna` generates a random DNA sequence.
 * `transcribe` transcribes a DNA sequence into a RNA sequence.
@@ -36,14 +36,20 @@ Each function is demonstrated below:
 
 ### Generate DNA
 
+The `generate_dna` is used to generate a random DNA sequence. The `length`
+argument controls the length of the generated sequence:
 
-### Transcribe DNA
+```{r}
+set.seed(6942069)
 
-Central dogma simulates transcription from DNA to RNA, using ```transcribe()`` functions,   
-which takes in a DNA fragment as the argument and replaces Thymine with Uracil. 
+generate_dna(length = 20)
+```
 
-* input - string representing DNA
-* output - string representing RNA
+
+### Transcribe DNA to RNA
+
+The `transcribe()` function transcribes a DNA sequence into a RNA sequence by 
+replacing Thymine (T) with Uracil (U):
 
 ```{r}
 dna_fragment <- "CCATGTTATG"
@@ -52,22 +58,64 @@ transcribe(dna_fragment)
 ```
 
 
+### Split RNA into Codons
 
-### Split Codons
-
-Splits a RNA string into codons based on the start reading frame 
-Start can be either 1,2 or 3 and the default is 1
+The `split_codons` function splits a RNA sequence into codons. The `start`
+argument specifies the start position of the reading frame. The position can be
+any position in the RNA sequence with a default value of one:
 
 ```{r}
-string <- "ATCGTACGATATGATACAGAGATAGACATATTTAACGG"
+rna_fragment <- "AUCGUACGAUAUGAUACAGAGAUAGACAUAUUUAACGG"
 
-split_codons(string, start = 1)
+split_codons(rna_fragment, start = 5)
 ```
 
 
-### Translate RNA
+### Translate RNA Codons into Protein
 
-### Plot amino acid occurences in the protein 
+The `translate` function translates a sequence of RNA codons into a protein
+sequence by replacing codons into the amino acids that they code for using a
+standard codon table:
+
+```{r}
+codon_table
+```
+
+A stop codon is indicated by "_".
+
+Here is an example of the use of the function:
+
+```{r}
+rna_codon_sequence <- c("GGG", "GGC", "GCG", "UCC", "GUC")
+
+translate(rna_codon_sequence)
+```
 
 
-### Example Workflow / Simulation
+### Plot Amino Acid Occurrences in a Protein 
+
+The `plot_aa_occurrence` function makes a plot of the occurrence of each amino
+acid in a protein sequence:
+
+```{r}
+protein_sequence <- "GGASVTVSRFW_PSQSKQRHRVEPVS_IQSYLP"
+
+plot_aa_occurrence(protein_sequence)
+```
+
+
+### Example Workflow
+
+The five functions included in `centraldogma` can be used in a pipeline as
+follows:
+
+```{r}
+set.seed(42069)
+
+dna_sequence <- generate_dna(length = 250)
+rna_sequence <- transcribe(dna_sequence)
+rna_codon_sequence <- split_codons(rna_sequence)
+protein_sequence <- translate(rna_codon_sequence)
+plot_aa_occurrence(protein_sequence)
+```
+
