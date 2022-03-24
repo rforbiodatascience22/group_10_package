@@ -15,16 +15,9 @@ package replicates the central dogma of molecular biology. More
 specifically it replicates the flow of genetic information from DNA to
 RNA to protein.
 
-The package consists of the following five functions:
-
--   `generate_dna` generates a random DNA sequence.
--   `transcribe` transcribes a DNA sequence into a RNA sequence.
--   `split_codons` splits a RNA sequence into codons.
--   `translate` translates a RNA codon sequence into a protein sequence.
--   `plot_aa_occurrence` plots the occurrence of each amino acid in a
-    protein sequence.
-
-Each function is demonstrated below:
+The package consists of the following five functions, which are
+demonstrated below: `generate_dna`, `transcribe`, `split_codons`,
+`translate` and `plot_aa_occurrence`.
 
 ### Generate DNA
 
@@ -67,24 +60,11 @@ split_codons(rna_fragment, start = 5)
 ### Translate RNA Codons into Protein
 
 The `translate` function translates a sequence of RNA codons into a
-protein sequence by replacing codons into the amino acids that they code
-for using a standard codon table:
+protein sequence by replacing codons into the amino acids they code for
+using a standard codon table. Stop codons are translated to “\_“. The
+codon table can be accessed with the function `codon_table`.
 
-``` r
-codon_table
-#> UUU UCU UAU UGU UUC UCC UAC UGC UUA UCA UAA UGA UUG UCG UAG UGG CUU CCU CAU CGU 
-#> "F" "S" "Y" "C" "F" "S" "Y" "C" "L" "S" "_" "_" "L" "S" "_" "W" "L" "P" "H" "R" 
-#> CUC CCC CAC CGC CUA CCA CAA CGA CUG CCG CAG CGG AUU ACU AAU AGU AUC ACC AAC AGC 
-#> "L" "P" "H" "R" "L" "P" "Q" "R" "L" "P" "Q" "R" "I" "T" "N" "S" "I" "T" "N" "S" 
-#> AUA ACA AAA AGA AUG ACG AAG AGG GUU GCU GAU GGU GUC GCC GAC GGC GUA GCA GAA GGA 
-#> "I" "T" "K" "R" "M" "T" "K" "R" "V" "A" "D" "G" "V" "A" "D" "G" "V" "A" "E" "G" 
-#> GUG GCG GAG GGG 
-#> "V" "A" "E" "G"
-```
-
-A stop codon is indicated by “\_“.
-
-Here is an example of the use of the function:
+Here is an example of the use of the `translate` function:
 
 ``` r
 rna_codon_sequence <- c("GGG", "GGC", "GCG", "UCC", "GUC")
@@ -104,7 +84,7 @@ protein_sequence <- "GGASVTVSRFW_PSQSKQRHRVEPVS_IQSYLP"
 plot_aa_occurrence(protein_sequence)
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
 
 ### Example Workflow
 
@@ -112,8 +92,6 @@ The five functions included in `centraldogma` can be used in a pipeline
 as follows:
 
 ``` r
-set.seed(42069)
-
 dna_sequence <- generate_dna(length = 250)
 rna_sequence <- transcribe(dna_sequence)
 rna_codon_sequence <- split_codons(rna_sequence)
@@ -121,4 +99,35 @@ protein_sequence <- translate(rna_codon_sequence)
 plot_aa_occurrence(protein_sequence)
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
+### Use cases for package
+
+`centraldogma` can e.g. be used to translate DNA sequences into protein
+sequences by running the full pipeline of functions as shown under
+example workflow. Alternatively one could start with RNA sequences
+instead and do the translation or start with a protein sequence and make
+an occurrence plot.
+
+### Ideas for more functions for the package
+
+Some other functions that could be implemented in the package could be:
+
+-   A function to read FASTA-files
+-   A function to write FASTA-files
+-   A function for reverse transcription
+
+Also it would be nice if the `translate` function could use other codon
+tables than the standard one.
+
+### Main points from discussion in Task 4
+
+The number of dependencies should be limited such that the user does not
+have to install a bunch of packages. It cannot be avoided if the R base
+package does not include the functionality that you want and you do not
+wish to implement it yourself.
+
+Adding an `@importFrom package function` tag to a function description
+has a small performance benefit compared to `package::function()` due to
+`::` adding approximately 5 µs to function evaluation time. However, it
+is more clear what package a function belongs to with `::`. Also,
+`@importFrom` might cause name conflicts if another function with the
+same name already exists in the namespace.
