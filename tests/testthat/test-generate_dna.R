@@ -1,3 +1,3 @@
-test_that("str_length is number of characters", {
+test_that("generated sequence has correct length", {
   expect_equal(nchar(generate_dna(length = 10)), 10)
 })
