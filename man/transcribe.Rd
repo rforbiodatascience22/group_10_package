@@ -4,18 +4,21 @@
 \alias{transcribe}
 \title{Transcribe DNA to RNA, substitute T with U}
 \usage{
-transcribe(DNA)
+transcribe(dna_string)
 }
 \arguments{
-\item{DNA}{DNA sequence}
+\item{dna_string}{A character object with a DNA sequence.}
 }
 \value{
-RNA sequence
+A character object with a RNA sequence that was transcribed from the
+DNA sequence.
 }
 \description{
 Transcribe DNA to RNA, substitute T with U
 }
 \examples{
-transcribe(DNA = "ATTA")
-#[1] "AUUA"
+dna_string <- "ATTA"
+
+transcribe(dna_string)
+# "AUUA"
 }

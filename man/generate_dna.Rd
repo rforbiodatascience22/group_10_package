@@ -7,10 +7,11 @@
 generate_dna(length)
 }
 \arguments{
-\item{length}{length of DNA sequence to generate}
+\item{length}{An integer specifying the length of the DNA sequence to
+generate.}
 }
 \value{
-Random DNA sequence string
+A character object with the generated DNA sequence.
 }
 \description{
 Generate a random DNA sequence

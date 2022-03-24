@@ -7,15 +7,16 @@
 plot_aa_occurrence(protein_string)
 }
 \arguments{
-\item{protein_string}{an amino acid sequence}
+\item{protein_string}{A character object with an amino acid sequence.}
 }
 \value{
-Plot of occurrences of each amino acid in a peptide
+A plot of occurrences of each amino acid in a peptide.
 }
 \description{
 Plot occurrences of amino acids in peptides
 }
 \examples{
-protein_string <- "GGASVTVSRFW*PSQSKQRHRVEPVS*IQSYLP"
+protein_string <- "GGASVTVSRFW_PSQSKQRHRVEPVS_IQSYLP"
+
 plot_aa_occurrence(protein_string)
 }

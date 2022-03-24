@@ -1,8 +1,9 @@
 #' Generate a random DNA sequence
 #'
-#' @param length length of DNA sequence to generate
+#' @param length An integer specifying the length of the DNA sequence to
+#' generate.
 #'
-#' @return Random DNA sequence string
+#' @return A character object with the generated DNA sequence.
 #' @export
 #'
 #' @examples

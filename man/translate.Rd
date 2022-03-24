@@ -2,13 +2,23 @@
 % Please edit documentation in R/translate.R
 \name{translate}
 \alias{translate}
-\title{Translates codons into amino acids}
+\title{Translate RNA codons into amino acids}
 \usage{
 translate(codons)
 }
 \arguments{
-\item{codons}{fdb}
+\item{codons}{An atomic character vector with a sequence of codons}
+}
+\value{
+A character object with an amino acid sequence that was translated
+from the sequence of RNA codons.
 }
 \description{
-Translates codons into amino acids
+Translate RNA codons into amino acids
+}
+\examples{
+codons <- c("GGG", "GGC", "GCG", "UCC", "GUC")
+
+translate(codons)
+# "GGASV"
 }

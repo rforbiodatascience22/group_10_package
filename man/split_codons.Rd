@@ -7,20 +7,24 @@
 split_codons(rna_string, start = 1)
 }
 \arguments{
-\item{rna_string}{RNA sequence string}
+\item{rna_string}{A character object with a RNA sequence.}
 
-\item{start}{position in RNA sequence where reading frame starts}
+\item{start}{An integer specifying the position in the RNA sequence where the
+reading frame starts.}
 }
 \value{
-Vector of codons in reading frame
+An atomic character vector with a sequence of codons corresponding to
+the specified reading frame of the RNA sequence.
 }
 \description{
 Split RNA sequence into codons
 }
 \examples{
 rna_string <- "ATCGTACGATATGATACAGAGATAGACATATTTAACGG"
+
 split_codons(rna_string)
 # "ATC" "GTA" "CGA" "TAT" "GAT" "ACA" "GAG" "ATA" "GAC" "ATA" "TTT" "AAC"
+
 split_codons(rna_string, start = 5)
 # "TAC" "GAT" "ATG" "ATA" "CAG" "AGA" "TAG" "ACA" "TAT" "TTA" "ACG"
 }
